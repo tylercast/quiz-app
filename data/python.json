@@ -1,0 +1,53 @@
+{
+  "quizId": "python",
+  "questions": [
+    {
+      "question": "What is the output of the following code?\nprint(2 ** 3)",
+      "type": "mcq",
+      "options": [
+        "6",
+        "8",
+        "3",
+        "Error"
+      ],
+      "answer": "8",
+      "feedback": "In Python, '**' is the exponentiation operator, so 2 ** 3 results in 8."
+    },
+    {
+      "question": "Which of the following is used to define a function in Python?",
+      "type": "mcq",
+      "options": [
+        "def",
+        "function",
+        "method",
+        "lambda"
+      ],
+      "answer": "def",
+      "feedback": "In Python, the 'def' keyword is used to define a function."
+    },
+    {
+      "question": "What does the 'lambda' keyword do in Python?",
+      "type": "text",
+      "answer": "The 'lambda' keyword defines an anonymous function in Python.",
+      "feedback": "Lambda functions in Python are used for creating small, anonymous functions on the fly."
+    },
+    {
+      "question": "What is the result of the following expression?\n'hello' + ' ' + 'world'",
+      "type": "mcq",
+      "options": [
+        "'hello world'",
+        "'helloworld'",
+        "'hello' + ' ' + 'world'",
+        "Error"
+      ],
+      "answer": "'hello world'",
+      "feedback": "In Python, using '+' on strings results in string concatenation, so 'hello' + ' ' + 'world' equals 'hello world'."
+    },
+    {
+      "question": "What is a tuple in Python?",
+      "type": "text",
+      "answer": "A tuple is an immutable sequence of items, similar to a list but cannot be changed after creation.",
+      "feedback": "Tuples are used in Python to store collections of data that should not be changed."
+    }
+  ]
+}
