@@ -9,7 +9,9 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Your custom CSS (optional) -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <script src="main.js"></script>
+  <img src="assets/logo.png" alt="Logo">
 
   <!-- Handlebars JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
@@ -26,5 +28,17 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script id="quiz-template" type="text/x-handlebars-template">
+  <!-- Template content here -->
+</script>
+
+  fetch('data/javascript.json')  // Adjust the filename if needed
+  .then(response => response.json())
+  .then(data => {
+    // Handle the data
+  });
+  
+
 </body>
 </html>
