@@ -5,32 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Quiz App</title>
   
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS (using CDN) -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   
-  <!-- Your custom CSS (optional) -->
+  <!-- Your custom CSS (relative path to styles.css) -->
   <link href="styles.css" rel="stylesheet" type="text/css">
-  <script src="main.js"></script>
-  <img src="assets/logo.png" alt="Logo">
 
-  <!-- Handlebars JS -->
+  <!-- Handlebars JS (using CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-  
-  <!-- Your custom JS -->
-  <script defer src="js/main.js"></script>
+
+  <!-- Your custom JS (relative path to main.js) -->
+  <script defer src="main.js"></script>
 </head>
 <body>
   <div class="container" id="app">
     <!-- App content will be injected here dynamically by Handlebars -->
   </div>
 
-  <!-- Optional: Bootstrap JS & jQuery (for Bootstrap components like modals or tooltips if needed) -->
+  <!-- Optional: Bootstrap JS & jQuery (relative paths to Bootstrap components) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <!-- Image logo in the assets folder (relative path) -->
+  <img src="assets/logo.png" alt="Logo">
+  
+  <!-- Handlebars template (you can fill this in with actual content) -->
   <script id="quiz-template" type="text/x-handlebars-template">
-  <!-- Template content here -->
-</script>
+    <!-- Template content will go here -->
+  </script>
 </body>
 </html>
