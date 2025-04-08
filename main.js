@@ -61,31 +61,42 @@ function stopTimer() {
   clearInterval(state.timer);
 }
 
-// Load a single question from API
+// Load a single question from local data (adjusted for subfolders)
 async function loadQuestion() {
   try {
-    const res = await fetch(`https://my-json-server.typicode.com/tylercast/quiz-app/quizzes/${state.quizId}/questions/${state.currentQuestionIndex}`);
+    // Determine the folder based on the quizId (javascript or python)
+    const folder = state.quizId.toLowerCase(); // Assumes quizId is 'javascript' or 'python'
+    const res = await fetch(`data/${folder}/${state.quizId}.json`);
+
     if (!res.ok) {
       showResult();
       return;
     }
 
-    const data = await res.json();
+    const quizData = await res.json();
+    const currentQuestion = quizData.questions[state.currentQuestionIndex - 1];
+
+    // If no more questions, show the result
+    if (!currentQuestion) {
+      showResult();
+      return;
+    }
+
     const template = await loadTemplate('quiz');
     const elapsed = Math.floor((Date.now() - state.startTime) / 1000);
 
     app.innerHTML = template({
-      question: data.question,
-      type: data.type,
-      options: data.options,
-      answer: data.answer,
-      feedback: data.feedback,
+      question: currentQuestion.question,
+      type: currentQuestion.type,
+      options: currentQuestion.options,
+      answer: currentQuestion.answer,
+      feedback: currentQuestion.feedback,
       score: state.score,
       total: state.currentQuestionIndex,
       time: elapsed
     });
 
-    document.querySelector('.answer-form').addEventListener('submit', (e) => handleAnswer(e, data.answer, data.feedback));
+    document.querySelector('.answer-form').addEventListener('submit', (e) => handleAnswer(e, currentQuestion.answer, currentQuestion.feedback));
   } catch (err) {
     console.error("Error loading question:", err);
   }
@@ -148,6 +159,7 @@ async function showResult() {
 
 // Start the app
 window.addEventListener('DOMContentLoaded', loadHome);
+);
 
 
 // Start app
