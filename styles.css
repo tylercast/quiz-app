@@ -1,0 +1,166 @@
+/* General Body Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  padding-top: 30px;
+}
+
+/* Header Styles */
+h1, h2, h3 {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #28a745;
+}
+
+/* App Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Timer and Scoreboard */
+#timer {
+  font-size: 1.25rem;
+  color: #007bff;
+  margin-top: 20px;
+}
+
+#score {
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+#total-score {
+  font-weight: bold;
+}
+
+/* Feedback Messages */
+.feedback-message {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.feedback-message.correct {
+  color: #28a745;
+}
+
+.feedback-message.incorrect {
+  color: #dc3545;
+}
+
+/* Question and Answer Styles */
+.question {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.options li {
+  margin: 10px 0;
+}
+
+/* Custom Buttons */
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+button.correct {
+  background-color: #28a745;
+}
+
+button.incorrect {
+  background-color: #dc3545;
+}
+
+/* Result View */
+.result-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.result-container h2 {
+  font-size: 2rem;
+}
+
+.result-container .score {
+  font-size: 1.5rem;
+}
+
+.result-container .pass {
+  color: #28a745;
+}
+
+.result-container .fail {
+  color: #dc3545;
+}
+
+/* Form and Input Styles */
+form {
+  margin-top: 20px;
+}
+
+form input,
+form select {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
