@@ -1,0 +1,15 @@
+<div class="card mt-5 p-4 shadow text-center">
+  <h2>
+    {{#if passed}}
+      🎉 Congratulations {{studentName}}! You passed the quiz!
+    {{else}}
+      😢 Sorry {{studentName}}, you didn't pass.
+    {{/if}}
+  </h2>
+
+  <p class="mt-3">Your Score: {{score}} / {{total}}</p>
+  <p>Time Taken: {{time}} seconds</p>
+
+  <button id="restart-btn" class="btn btn-primary mt-3 me-2">Retake Quiz</button>
+  <button id="home-btn" class="btn btn-secondary mt-3">Return Home</button>
+</div>
