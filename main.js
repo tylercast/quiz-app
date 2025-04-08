@@ -16,7 +16,7 @@ const state = {
 // Main app container
 const app = document.getElementById('app');
 
-// Load and compile Handlebars templates
+// Load and compile Handlebars templates from the templates folder
 async function loadTemplate(name) {
   const res = await fetch(`templates/${name}.handlebars`);
   const text = await res.text();
@@ -28,6 +28,7 @@ async function loadHome() {
   const template = await loadTemplate('home');
   app.innerHTML = template();
 
+  // Event listener for the start form
   document.getElementById('start-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const nameInput = document.getElementById('student-name').value.trim();
@@ -96,6 +97,7 @@ async function loadQuestion() {
       time: elapsed
     });
 
+    // Event listener for answer submission
     document.querySelector('.answer-form').addEventListener('submit', (e) => handleAnswer(e, currentQuestion.answer, currentQuestion.feedback));
   } catch (err) {
     console.error("Error loading question:", err);
@@ -159,9 +161,3 @@ async function showResult() {
 
 // Start the app
 window.addEventListener('DOMContentLoaded', loadHome);
-);
-
-
-// Start app
-window.addEventListener('DOMContentLoaded', loadHome);
-
