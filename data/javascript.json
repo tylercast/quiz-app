@@ -1,0 +1,59 @@
+{
+  "quizId": "javascript",
+  "questions": [
+    {
+      "question": "What does 'var' do in JavaScript?",
+      "type": "mcq",
+      "options": [
+        "Declares a variable with global scope",
+        "Declares a variable with block scope",
+        "Declares a constant",
+        "None of the above"
+      ],
+      "answer": "Declares a variable with global scope",
+      "feedback": "In JavaScript, 'var' declares a variable with global or function scope."
+    },
+    {
+      "question": "Which method is used to add a new item to the end of an array?",
+      "type": "mcq",
+      "options": [
+        "push()",
+        "pop()",
+        "shift()",
+        "unshift()"
+      ],
+      "answer": "push()",
+      "feedback": "The push() method adds a new item to the end of an array."
+    },
+    {
+      "question": "What will the following code return?\nconsole.log(typeof null);",
+      "type": "mcq",
+      "options": [
+        "object",
+        "null",
+        "undefined",
+        "boolean"
+      ],
+      "answer": "object",
+      "feedback": "In JavaScript, 'typeof null' incorrectly returns 'object' due to a bug in the language."
+    },
+    {
+      "question": "Explain the difference between == and === in JavaScript.",
+      "type": "text",
+      "answer": "== checks for equality of values, while === checks for equality of both values and types.",
+      "feedback": "Use === for strict comparison in JavaScript to avoid unexpected type conversions."
+    },
+    {
+      "question": "What is the output of the following code?\nconsole.log(1 + '1');",
+      "type": "mcq",
+      "options": [
+        "2",
+        "'11'",
+        "NaN",
+        "Error"
+      ],
+      "answer": "'11'",
+      "feedback": "In JavaScript, the + operator concatenates the string and number, so 1 + '1' results in '11'."
+    }
+  ]
+}
