@@ -62,14 +62,12 @@ function stopTimer() {
   clearInterval(state.timer);
 }
 
-// Load a single question from local data (adjusted for subfolders)
 async function loadQuestion() {
   try {
-    // Determine the folder based on the quizId (javascript or python)
-    const folder = state.quizId.toLowerCase(); // Assumes quizId is 'javascript' or 'python'
-    const res = await fetch(`data/${folder}/${state.quizId}.json`);
+    const res = await fetch(`data/${state.quizId}.json`);
 
     if (!res.ok) {
+      console.error("Failed to load quiz data:", res.statusText);
       showResult();
       return;
     }
@@ -77,7 +75,6 @@ async function loadQuestion() {
     const quizData = await res.json();
     const currentQuestion = quizData.questions[state.currentQuestionIndex - 1];
 
-    // If no more questions, show the result
     if (!currentQuestion) {
       showResult();
       return;
@@ -97,12 +94,15 @@ async function loadQuestion() {
       time: elapsed
     });
 
-    // Event listener for answer submission
-    document.querySelector('.answer-form').addEventListener('submit', (e) => handleAnswer(e, currentQuestion.answer, currentQuestion.feedback));
+    document.querySelector('.answer-form').addEventListener(
+      'submit',
+      (e) => handleAnswer(e, currentQuestion.answer, currentQuestion.feedback)
+    );
   } catch (err) {
     console.error("Error loading question:", err);
   }
 }
+
 
 // Handle answer submission
 async function handleAnswer(event, correctAnswer, feedbackText) {
